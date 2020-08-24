@@ -7,7 +7,7 @@ from Crypto.Cipher import AES
 # la key debe ser de 16 bytes
 key = b'Mi llave cute :3'
 data = b'Abril es la mejor del mundo mundial ntt'
-cipher = AES.new(key, AES.MODE_EAX)
+cipher = AES.new(key, AES.MODE_GCM)
 nonce = cipher.nonce
 ciphertext, tag = cipher.encrypt_and_digest(data)
 
