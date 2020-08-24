@@ -2,8 +2,8 @@ from Crypto.Cipher import AES
 from Crypto.Random import get_random_bytes
 
 # variables para completar el cifrado
-hdr = b'To your eyes only'
-key = b'Sixteen byte key'
+hdr = b'hdr oculto para cifrado'
+key = b'Llave para cifrar en bytes'
 nonce = get_random_bytes(11)
 
 ans=True
@@ -27,7 +27,7 @@ while ans:
         cipher.update(hdr)
         msg = nonce, hdr, cipher.encrypt(plaintext), cipher.digest()
 
-        print ('\nEl mensaje que para enviado es:\n')
+        print ('\nEl mensaje que se ha enviado es:\n')
         print (msg)
 
     elif ans=="2":
