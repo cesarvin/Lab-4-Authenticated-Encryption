@@ -2,8 +2,9 @@ from Crypto.Cipher import AES
 from Crypto.Random import get_random_bytes
 
 # variables para completar el cifrado
-hdr = b'hdr oculto para cifrado'
-key = b'Llave para cifrar en bytes'
+hdr = b'Oculto al generar'
+key = b'clave de 16bytes'
+
 nonce = get_random_bytes(11)
 
 ans=True
